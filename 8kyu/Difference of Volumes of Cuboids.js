@@ -7,12 +7,8 @@
 //     If you can, try writing it in one line of code.
 function findDifference(a, b) {
 
-    const multA = a.reduce(function(total, amount){
-        return total * amount
-    });
+    const multA = a.reduce((total, amount) => total * amount, 1);
 
-    const multB = b.reduce(function(total, amount){
-        return total * amount
-    });
-    return multA - multB;
+    const multB = b.reduce((total, amount) => total * amount, 1);
+    return Math.abs(multA - multB);
 }
